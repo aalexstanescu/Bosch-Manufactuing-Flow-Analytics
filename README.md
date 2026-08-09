@@ -22,6 +22,14 @@ The analysis was designed to answer three primary questions:
 - Where are the largest delays and potential flow bottlenecks?
 - Which stations and production routes are associated with elevated failure rates?
 
+## Engineering Methods
+
+- Manufacturing process-flow and routing analysis
+- Bottleneck identification using station-to-station transit time distributions
+- Statistical observation thresholds to reduce small sample bias
+- Production volume and route concentration analysis
+- Process visualization and KPI development
+
 ## Key Findings
 
 - **37 → 38 emerged as the dominant flow-time bottleneck**, with a median transit time of **7.52** and P95 of **49.61**, compared with median transit times below 0.05 for most transitions
@@ -122,8 +130,14 @@ Bosch-Manufacturing-Flow-Analytics/
 
 The original Bosch dataset is not included in this repository. To reproduce the analysis:
 
-1. Download `train_date.csv` and `train_numeric.csv` from the Bosch Production Line Performance competition on Kaggle.
-2. Place the files in `data/raw/`.
-3. Run the Python scripts in `scripts/` sequentially.
+1. Install the required Python dependencies:
+
+   `pip install -r requirements.txt`
+
+2. Download `train_date.csv` and `train_numeric.csv` from the Bosch Production Line Performance competition on Kaggle.
+
+3. Place both files in `data/raw/`.
+
+4. Run the Python scripts in `scripts/` sequentially.
 
 The scripts reconstruct the Line 3 event, transition, station, and route-level datasets used in the Power BI dashboard.
